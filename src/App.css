@@ -1,15 +1,14 @@
 .container {
   display: flex;
   flex-direction: column;  
-  justify-content: center;  
-  
+  justify-content: center;   
 }
+
 .header {
   display: flex;
   flex-direction: row;
   background-color: black;
-  color: white;
- 
+  color: white; 
   align-items: center;
   padding: 10px;
   font-size: 25px;
@@ -37,13 +36,15 @@
   background-color:white;
   border-radius:6px;
   margin-left:20px;
-  width:80%;
+  
   align-items:center;
 }
+
 .search-icon{
   width: 32px;
   height: 32px;
 }
+
 .search-input {
   color:black;
   font-size:16px;

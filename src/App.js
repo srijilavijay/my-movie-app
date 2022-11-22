@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="container">
       <div className="header">
-        <div className="app-name">
+        <div className="app-name">          
           <img className="movie-image" src={icon} alt="movie icon"/>
           React Movie App
         </div>
