@@ -35,8 +35,17 @@ function App() {
     <div className="container">
       <div className="header">
         <div className="app-name">
-          <img className="movie-image" src={icon} alt="movie icon" />
-          React Movie App
+          <img
+            className="movie-image"
+            src={icon}
+            alt="movie icon"
+            onClick={() => {
+              updateMovieList();
+              onMovieSelect();
+            }}
+          />
+          <div className="name">Movie App</div>
+          
         </div>
         <div className="search-box">
           <img className="search-icon" src={searchIcon} alt="search icon" />
@@ -65,7 +74,8 @@ function App() {
                 onMovieSelect={onMovieSelect}
               />
             ))
-          : "No Movie Search"}
+          : (
+          <div><img src={icon} alt="No Movies" /><h4>Search for Movies</h4></div>) }
       </div>
     </div>
   );

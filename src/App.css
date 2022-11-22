@@ -1,14 +1,14 @@
 .container {
   display: flex;
-  flex-direction: column;  
-  justify-content: center;   
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header {
   display: flex;
   flex-direction: row;
   background-color: black;
-  color: white; 
+  color: white;
   align-items: center;
   padding: 10px;
   font-size: 25px;
@@ -26,46 +26,45 @@
 .movie-image {
   width: 48px;
   height: 48px;
-  margin: 15px;
+  margin: 10px 30px;
+}
+.name {
+  margin: 0 10px;
 }
 
 .search-box {
-  display:flex;
-  flex-direction:row;
-  padding:10px;
-  background-color:white;
-  border-radius:6px;
-  margin-left:20px;
-  
-  align-items:center;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  background-color: white;
+  border-radius: 6px;
+  margin: 0 30px;
+  align-items: center;
 }
 
-.search-icon{
+.search-icon {
   width: 20px;
   height: 20px;
 }
 
 .search-input {
-  color:black;
-  font-size:16px;
-  font-weight:bold;
-  border:none;
-  outline:none;
-  margin-left:15px;
-  display: flex;
-  flex-direction: row;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  margin-left: 15px;
 }
 
 .info-container {
   padding: 30px;
 }
 
-.movie-list-container{
+.movie-list-container {
   display: flex;
   flex-direction: row;
   padding: 30px;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 24px;
- 
 }
