@@ -1,0 +1,30 @@
+.search-box-container{
+    display:flex;
+    flex-direction:row;
+    padding:10px;
+    background-color:white;
+    border-radius:6px;
+    margin-left:20px;
+    width:50%;
+    align-items:center;
+}
+.search-item{
+    width: 32px;
+    height: 32px;
+}
+.search-input {
+    color:black;
+    font-size:16px;
+    font-weight:bold;
+    border:none;
+    outline:none;
+    margin-left:15px;
+}
+.movie-list-container {
+    display: flex;
+  flex-direction: row;
+  padding: 30px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 24px;
+}

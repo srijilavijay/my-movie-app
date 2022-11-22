@@ -1,0 +1,34 @@
+.info-card-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+   flex-wrap: wrap;
+}
+.card-container {
+    display: flex;
+    flex-direction: row;
+   
+}
+.image-container {
+    display: flex;
+    flex-direction: column;
+}
+.card-body-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+span {
+    opacity: 0.5  ;
+}
+.card-title {
+    font-weight: 400;
+}
+.poster {
+    object-fit: cover;
+    height: 352px;
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
