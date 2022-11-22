@@ -41,8 +41,8 @@
 }
 
 .search-icon{
-  width: 32px;
-  height: 32px;
+  width: 20px;
+  height: 20px;
 }
 
 .search-input {
@@ -52,7 +52,14 @@
   border:none;
   outline:none;
   margin-left:15px;
+  display: flex;
+  flex-direction: row;
 }
+
+.info-container {
+  padding: 30px;
+}
+
 .movie-list-container{
   display: flex;
   flex-direction: row;

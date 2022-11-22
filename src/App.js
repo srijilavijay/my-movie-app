@@ -3,8 +3,7 @@ import { useState } from "react";
 import MovieInfo from "./component/movie-info/movie-info.component";
 
 import axios from "axios";
-import './App.css'
-
+import "./App.css";
 
 const icon =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYeaTWNDuBu6TqVIyAwKe8-4AOzo1G-I6sbw&usqp=CAU";
@@ -35,12 +34,12 @@ function App() {
   return (
     <div className="container">
       <div className="header">
-        <div className="app-name">          
-          <img className="movie-image" src={icon} alt="movie icon"/>
+        <div className="app-name">
+          <img className="movie-image" src={icon} alt="movie icon" />
           React Movie App
         </div>
         <div className="search-box">
-          <img className="search-icon" src={searchIcon} alt="search icon"/>
+          <img className="search-icon" src={searchIcon} alt="search icon" />
           <input
             className="search-input"
             placeholder="Search Movie"
@@ -49,13 +48,14 @@ function App() {
           />
         </div>
       </div>
-      
-      {selectedMovie && (
-        <MovieInfo
-          selectedMovie={selectedMovie}
-          onMovieSelect={onMovieSelect}
-        />
-      )}
+      <div className="info-container">
+        {selectedMovie && (
+          <MovieInfo
+            selectedMovie={selectedMovie}
+            onMovieSelect={onMovieSelect}
+          />
+        )}
+      </div>
       <div className="movie-list-container">
         {movieList?.length
           ? movieList.map((movie, index) => (
