@@ -1,6 +1,8 @@
 import MovielistComponent from "./component/movie-list/movie-list.component";
 import { useState } from "react";
 import MovieInfo from "./component/movie-info/movie-info.component";
+import TrendingList from "./component/trending-list/trending-list.component";
+import CategorySort from "./component/category-sort/category-sort.component";
 
 import axios from "axios";
 import "./App.css";
@@ -18,12 +20,17 @@ function App() {
   const [movieList, updateMovieList] = useState([]);
   const [timeoutId, updateTimeoutId] = useState();
   const [selectedMovie, onMovieSelect] = useState();
+  const [filteredList, setFilteredList] = useState([]);
+  const [activeCategory, setActiveCategory] = useState("all");
+
 
   const fetchData = async (searchString) => {
     const response = await axios.get(
       `https://www.omdbapi.com/?s=${searchString}&apikey=${API_KEY}`
     );
+    
     updateMovieList(response.data.Search);
+    setFilteredList(response.data.Search);
   };
   const onTextChange = (event) => {
     clearTimeout(timeoutId);
@@ -57,6 +64,9 @@ function App() {
           />
         </div>
       </div>
+      <TrendingList />
+      <CategorySort movieList= {movieList} setFilteredList={setFilteredList} activeCategory={activeCategory} setActiveCategory={setActiveCategory}  />
+      
       <div className="info-container">
         {selectedMovie && (
           <MovieInfo
@@ -66,8 +76,8 @@ function App() {
         )}
       </div>
       <div className="movie-list-container">
-        {movieList?.length
-          ? movieList.map((movie, index) => (
+        {filteredList?.length
+          ? filteredList.map((movie, index) => (
               <MovielistComponent
                 key={index}
                 movie={movie}

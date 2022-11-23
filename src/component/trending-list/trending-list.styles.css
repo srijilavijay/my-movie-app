@@ -1,0 +1,29 @@
+.trending-list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin:20px;
+}
+
+.trending-container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 3px 10px 0 rgb(54, 85, 86);
+  justify-content: space-between;
+  width: 280px;
+  height: 200px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+    overflow: hidden;
+
+}
+.trending-image {
+  cursor: pointer;
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+  transition: width 1s;
+}
+.trending-image:hover {
+  width: 300px;
+}
